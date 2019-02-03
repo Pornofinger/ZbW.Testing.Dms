@@ -22,5 +22,21 @@ namespace ZbW.Testing.Dms.Client.Properties {
                 return defaultInstance;
             }
         }
+
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string currentUser
+        {
+            get
+            {
+                return ((string)(this["currentUser"]));
+            }
+            set
+            {
+                this["currentUser"] = value;
+            }
+        }
     }
 }
