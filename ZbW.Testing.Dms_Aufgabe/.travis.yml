@@ -1,0 +1,5 @@
+language: csharp
+solution: ZbW.Testing.Dms.sln
+install:
+  - nuget restore ZbW.Testing.Dms.sln
+  - nuget install NUnit.Console -Version 3.11.0 -OutputDirectory testrunner
