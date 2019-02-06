@@ -4,4 +4,4 @@ install:
 - travis_retry nuget restore -source "https://www.nuget.org/api/v2" ./ZbW.Testing.Dms_Aufgabe/ZbW.Testing.Dms.sln
 script:
 - xbuild ./ZbW.Testing.Dms_Aufgabe/ZbW.Testing.Dms.sln
-- mono ./ZbW.Testing.Dms_Aufgabe/packages/xunit.runner.console*/tools/xunit.console.exe ./ZbW.Testing.Dms_Aufgabe/ZbW.Testing.Dms.UnitTests/bin/Debug/netstandard2.0/ZbW.Testing.Dms.UnitTests.dll
+- mono ./ZbW.Testing.Dms_Aufgabe/packages/xunit.runner.console*/tools/xunit.console.exe ./ZbW.Testing.Dms_Aufgabe/ZbW.Testing.Dms.Client.UnitTests/bin/Debug/ZbW.Testing.Dms.Client.UnitTests.dll

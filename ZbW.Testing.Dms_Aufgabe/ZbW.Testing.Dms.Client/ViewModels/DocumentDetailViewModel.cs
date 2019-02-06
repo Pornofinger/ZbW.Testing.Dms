@@ -11,7 +11,7 @@ namespace ZbW.Testing.Dms.Client.ViewModels
     using Prism.Mvvm;
     using ZbW.Testing.Dms.Client.Repositories;
 
-    internal class DocumentDetailViewModel : BindableBase
+    public class DocumentDetailViewModel : BindableBase
     {
         private readonly Action _navigateBack;
 
