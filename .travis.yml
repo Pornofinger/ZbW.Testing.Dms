@@ -1,12 +1,7 @@
 language: csharp
-solution: ZbW.Testing.Dms.sln
-mono:
-  - latest
-  - 4.61.0
-  - 3.12.0
-  - 3.10.0
+solution: "./ZbW.Testing.Dms_Aufgabe/ZbW.Testing.Dms.sln"
 install:
-  - nuget restore ZbW.Testing.Dms.sln
-  - nuget install NUnit.Console -Version 3.11.0 -OutputDirectory testrunner
-  script:
-  - msbuild /p:Configuration=Release ZbW.Testing.Dms.sln
+- travis_retry nuget restore -source "https://www.nuget.org/api/v2" ./ZbW.Testing.Dms_Aufgabe/ZbW.Testing.Dms.sln
+script:
+- xbuild ./ZbW.Testing.Dms_Aufgabe/ZbW.Testing.Dms.sln
+- mono ./ZbW.Testing.Dms_Aufgabe/packages/xunit.runner.console*/tools/xunit.console.exe ./ZbW.Testing.Dms_Aufgabe/ZbW.Testing.Dms.UnitTests/bin/Debug/netstandard2.0/ZbW.Testing.Dms.UnitTests.dll
