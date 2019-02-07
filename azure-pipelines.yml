@@ -27,10 +27,4 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
-- task: PublishTestResults@2
-  inputs:
-    command: push
-    nuGetFeedType: external
-    publishFeedCredentials: 'NUnit'
-    versioningScheme: byEnvVar
-    versionEnvVar: 3.11.0
+
