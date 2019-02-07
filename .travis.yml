@@ -1,7 +1,9 @@
 language: csharp
-solution: "./ZbW.Testing.Dms_Aufgabe/ZbW.Testing.Dms.sln"
+solution: ZbW.Testing.Dms_Aufgabe/ZbW.Testing.Dms.sln
 install:
-- travis_retry nuget restore -source "https://www.nuget.org/api/v2" ./ZbW.Testing.Dms_Aufgabe/ZbW.Testing.Dms.sln
+  - nuget restore ZbW.Testing.Dms_Aufgabe/ZbW.Testing.Dms.sln
+  - nuget install NUnit.Runners -Version 3.9.0 -OutputDirectory testrunner
 script:
-- xbuild ./ZbW.Testing.Dms_Aufgabe/ZbW.Testing.Dms.sln
-- mono ./ZbW.Testing.Dms_Aufgabe/packages/xunit.runner.console*/tools/xunit.console.exe ./ZbW.Testing.Dms_Aufgabe/ZbW.Testing.Dms.UnitTests/bin/Debug/netstandard2.0/ZbW.Testing.Dms.UnitTests.dll
+  - msbuild /p:Configuration=Debug ZbW.Testing.Dms_Aufgabe/ZbW.Testing.Dms.sln
+  - mono ./testrunner/NUnit.ConsoleRunner.3.11.0/tools/nunit3-console.exe ./ZbW.Testing.Dms_Aufgabe/ZbW.Testing.Dms.Client.UnitTests/bin/Debug/ZbW.Testing.Dms.Client.UnitTests.dll
+
