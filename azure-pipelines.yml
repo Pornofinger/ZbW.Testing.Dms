@@ -28,10 +28,9 @@ steps:
     configuration: '$(buildConfiguration)'
 
 - task: PublishTestResults@2
-    displayName: Publish test results
-    inputs:
-      testResultsFormat: NUnit
-      testResultsFiles: test-results\net45\*.xml # Or net 40, or 5 others
-      mergeTestResults: true
-      testRunTitle: net45/Windows # Or net40/Linux, or 16 others
-    condition: succeededOrFailed()
+  inputs:
+    command: push
+    nuGetFeedType: external
+    publishFeedCredentials: 'NUnit'
+    versioningScheme: byEnvVar
+    versionEnvVar: 3.11.0
