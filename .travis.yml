@@ -1,9 +1,9 @@
 language: csharp
 script:
-  - xbuild /p:Configuration=Debug ZbW.Testing.Dms.sln
+  - xbuild /p:Configuration=Debug ZbW.Testing.Dms_Aufgabe/ZbW.Testing.Dms.sln
 before_install:
   - sudo apt-get install nunit-console
 before_script:
-  - nuget restore ZbW.Testing.Dms.sln
+  - nuget restore ZbW.Testing.Dms_Aufgabe/ZbW.Testing.Dms.sln
 after_script:
-  - nunit-console ZbW.Testing.Dms.Client.UnitTests/bin/Debug/ZbW.Testing.Dms.Client.UnitTests.dll
+  - nunit-console ZbW.Testing.Dms_Aufgabe/ZbW.Testing.Dms.Client.UnitTests/bin/Debug/ZbW.Testing.Dms.Client.UnitTests.dll
