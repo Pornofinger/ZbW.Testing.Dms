@@ -54,5 +54,18 @@ namespace ZbW.Testing.Dms.Client.UnitTests
             //assert
             Assert.That(result, Is.EqualTo(VALID_USER));
         }
+
+        [Test]
+        public void LoginViewModel_LoginAbbruch_False()
+        {
+            // arrange
+            var sut = new LoginViewModel(null);
+
+            //act
+            var result = sut.CmdAbbrechen.CanExecute();
+
+            //assert
+            Assert.That(result, Is.True);
+        }
     }
 }
