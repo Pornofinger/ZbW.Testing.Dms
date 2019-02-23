@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace ZbW.Testing.Dms.Client.Services
 {
-    class UserService
+    public class UserService
     {
-        internal UserTestable UserTestable { private get; set; }
+        public UserTestable UserTestable { private get; set; }
 
         public void SaveUsername(string username)
         {

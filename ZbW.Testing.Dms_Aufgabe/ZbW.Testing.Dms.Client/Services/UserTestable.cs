@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ZbW.Testing.Dms.Client.Services
 {
-    class UserTestable
+    public class UserTestable
     {
         public virtual String GetCurrentUsersernme()
         {

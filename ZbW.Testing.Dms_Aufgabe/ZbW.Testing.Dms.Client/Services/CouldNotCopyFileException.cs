@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ZbW.Testing.Dms.Client.Services
 {
-    class CouldNotCopyFileException : Exception
+    public class CouldNotCopyFileException : Exception
     {
         public CouldNotCopyFileException(string message, Exception innerException)
             : base(message, innerException)
