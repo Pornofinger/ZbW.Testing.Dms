@@ -40,7 +40,7 @@ namespace ZbW.Testing.Dms.Client.Services
             set => SetProperty(ref _metadataItems, value);
         }
 
-        internal void AddDocumentToDms(MetadataItem metadataItem)
+        public void AddDocumentToDms(MetadataItem metadataItem)
         {
             var targetPath = _targePath + "/" + metadataItem.ValutaDatum.Year;
             var guid = Guid.NewGuid();

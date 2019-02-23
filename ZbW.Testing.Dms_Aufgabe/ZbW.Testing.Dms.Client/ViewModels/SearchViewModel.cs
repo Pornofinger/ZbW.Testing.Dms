@@ -9,7 +9,7 @@ namespace ZbW.Testing.Dms.Client.ViewModels
     using ZbW.Testing.Dms.Client.Model;
     using ZbW.Testing.Dms.Client.Repositories;
 
-    internal class SearchViewModel : BindableBase
+    public class SearchViewModel : BindableBase
     {
         private List<MetadataItem> _filteredMetadataItems;
 
